@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  font-family: Fira Sans, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(246, 246, 246);
+}
+
+.header {
+  align-items: center;
+  background-color: rgb(3, 20, 52);
+  display: flex;
+  height: 60px;
+  position: relative;
+  width: 100%;
+}
+
+.container-title {
+  width: 80%;
+}
+
+.title {
+  color: rgb(221, 221, 221);
+  font-size: 30px;
+  padding-left: 30px;
+}
+
+.container-cartTitle {
+  align-items: center;
+  background-color: rgb(10, 57, 118);
+  display: flex;
+  height: 100%;
+  margin-left: 30px;
+  position: relative;
+  width: 40%;
+}
+
+.container-cartTitle span {
+  z-index: 1;
+}
+
+.container-cartTitle:after {
+  background: rgb(10, 57, 118);
+  content: '';
+  height: 15px;
+  position: absolute;
+  right: 61.5%;
+  top: 15px;
+  transform: skew(-45deg);
+  width: 39.5%;
+  z-index: 0;
+}
+
+.container-cartTitle:before {
+  background: rgb(10, 57, 118);
+  content: '';
+  height: 15px;
+  position: absolute;
+  right: 61.5%;
+  top: 30px;
+  transform: skew(45deg);
+  width: 39.5%;
+  z-index: 0;
+}
+
+.container-cartTitle .cart__title {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  padding-left: 35px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.title strong {
+  color: white;
+}
+
+.items {
+  display: flex;
+  flex-basis: 70%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.item {
+  border: 2px solid rgb(234, 234, 233);
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin: 5px;
+  width: 200px;
+}
+
+.item .item__sku {
+  display: none;
+}
+
+.item .item__title {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+.item .item__image {
+  width: 100%;
+}
+
+.item .item__add {
+  background-color: rgb(5, 52, 219);
+  border: 0;
+  color: white;
+  cursor: pointer;
+  margin: 0;
+  padding: 10px;
+}
+
+.cart {
+  background-color: rgb(241, 241, 238);
+  display: flex;
+  flex-basis: 32%;
+  flex-flow: column wrap;
+  height: 100vh;
+}
+
+.cart .cart__items {
+  height: 500px;
+  overflow-y: scroll;
+}
+
+.empty-cart {
+  background-color: rgb(249, 249, 246);
+  border: 2px solid rgb(5, 52, 219);
+  height: 35px;
+  margin: 0 auto;
+  width: 170px;
+}
